@@ -1,2 +1,2 @@
 ## Workflow
-![SOC Workflow](docs/workflow.png)
+![SOC Workflow](/docs/Workflow.png)
