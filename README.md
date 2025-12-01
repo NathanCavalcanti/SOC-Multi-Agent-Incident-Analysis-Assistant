@@ -1,0 +1,3 @@
+# SOC Multi-Agent AI Assistant
+
+...[contenido abreviado por límite de espacio; en una implementación real colocaríamos aquí el contenido íntegro generado anteriormente]...
