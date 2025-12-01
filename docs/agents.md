@@ -1,5 +1,4 @@
-# 🤖 Agents – SOC Multi-Agent AI Assistant (v1.0)
-
+# 🤖 Agents – SOC Multi-Agent AI Assistant (v1.0.2)
 This document describes each agent’s role and responsibilities.
 
 ---
@@ -36,6 +35,8 @@ Guaranteed JSON block extracted using a sanitizing function.
 
 1. LLM proposes MITRE technique IDs  
 2. `integrations/mitre_local_db.py` validates  
+   - Online → download ATT&CK JSON  
+   - Offline → fallback to `data/enterprise-attack.json`  
    - name  
    - tactic  
    - description  
@@ -83,6 +84,9 @@ id, cvss, description, source_keyword, confidence
 
 # 5. Report Agent (agents/report_agent.py)
 
+### Model  
+`llama-3.3-70b-versatile` (Groq)
+
 ### Responsibilities  
 
 Build a full SOC incident report:
@@ -104,6 +108,3 @@ incident_report_*.txt
 
 ---
 
-# Version  
-
-**v1.0**

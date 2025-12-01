@@ -1,4 +1,4 @@
-# 🛡️ SOC Multi-Agent AI Assistant
+# 🛡️ SOC Multi-Agent AI Assistant - CLI
 
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![LangGraph](https://img.shields.io/badge/LangGraph-0.1.15+-green.svg)

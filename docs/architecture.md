@@ -1,4 +1,4 @@
-# 🏛️ Architecture – SOC Multi-Agent AI Assistant (v1.0)
+# 🏛️ Architecture – SOC Multi-Agent AI Assistant (v1.0.2)
 
 This document provides the full technical architecture of the system.
 
@@ -111,6 +111,3 @@ Stored as immutable analysis evidence.
 
 ---
 
-# 6. Version
-
-**SOC Multi-Agent AI Assistant v1.0**

@@ -43,8 +43,26 @@ def main() -> None:
     initial_state = {"input_text": incident_text}
 
     # 3) Execute graph with LLM error handling
+    print("\nStarting analysis pipeline...")
     try:
-        result = graph.invoke(initial_state)
+        # Use streaming to show progress bar
+        from tqdm import tqdm
+
+        # We anticipate 5 main steps: ioc, mitre, cve, investigation, report
+        expected_steps = 5
+        result = dict(initial_state)
+
+        with tqdm(total=expected_steps, desc="Initializing agents", unit="step") as pbar:
+            for step_output in graph.stream(initial_state):
+                for node_name, node_result in step_output.items():
+                    # Update the accumulated state with the node's output
+                    if isinstance(node_result, dict):
+                        result.update(node_result)
+                    
+                    # Update progress bar
+                    pbar.set_description(f"Finished: {node_name}")
+                    pbar.update(1)
+
     except RuntimeError as e:
         msg = str(e)
 

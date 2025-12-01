@@ -1,5 +1,4 @@
-## Workflow 
-```
+## Workflow (v1.0.2)
 ┌─────────────────┐
 │  User Input     │
 │  (CLI)          │
@@ -12,26 +11,26 @@
          │
     ┌────▼──────────────────────────────────┐
     │                                       │
-    │  ┌─────────────┐                     │
-    │  │ IOC Agent   │ ► Extract IPs,      │
-    │  └──────┬──────┘   domains, hashes   │
+    │  ┌─────────────┐                      │
+    │  │ IOC Agent   │ ► Extract IPs,       │
+    │  └──────┬──────┘   domains, hashes    │
     │         │                             │
-    │  ┌──────▼──────┐                     │
-    │  │ MITRE Agent │ ► Map techniques    │
-    │  └──────┬──────┘   (validated)       │
+    │  ┌──────▼──────┐                      │
+    │  │ MITRE Agent │ ► Map techniques     │
+    │  └──────┬──────┘   (validated)        │
     │         │                             │
-    │  ┌──────▼──────┐                     │
-    │  │  CVE Agent  │ ► Fetch CVEs        │
-    │  └──────┬──────┘   from NVD API      │
+    │  ┌──────▼──────┐                      │
+    │  │  CVE Agent  │ ► Fetch CVEs         │
+    │  └──────┬──────┘   from NVD API       │
     │         │                             │
-    │  ┌──────▼───────────┐                │
-    │  │ Investigation    │ ► DFIR Plan    │
-    │  │ Agent            │                │
-    │  └──────┬───────────┘                │
+    │  ┌──────▼───────────┐                 │          
+    │  │ Investigation    │ ► DFIR Plan     │
+    │  │ Agent            │                 │
+    │  └──────┬───────────┘                 │
     │         │                             │
-    │  ┌──────▼──────┐                     │
-    │  │ Report Agent│ ► Generate JSON/TXT │
-    │  └──────┬──────┘                     │
+    │  ┌──────▼──────┐                      │
+    │  │ Report Agent│ ► Generate JSON/TXT  │ 
+    │  └──────┬──────┘                      │
     └─────────┼─────────────────────────────┘
               │
               ▼

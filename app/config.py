@@ -21,7 +21,7 @@ if not GROQ_API_KEY:
         "Add it to your environment or to the .env file in the project root."
     )
 
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+GROQ_MODEL = os.getenv("GROQ_MODEL")
 groq_client = Groq(api_key=GROQ_API_KEY)
 
 # ===== GEMINI Configuration =====
@@ -32,7 +32,7 @@ if not GEMINI_API_KEY:
         "Add it to your environment or to the .env file in the project root."
     )
 
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL")
 
 # Import Gemini SDK
 try:
@@ -186,3 +186,4 @@ def extract_json_block(text: str) -> str:
     # 3) If there's no way to extract JSON, return text as is
     # for the caller to decide what to do.
     return text.strip()
+    
