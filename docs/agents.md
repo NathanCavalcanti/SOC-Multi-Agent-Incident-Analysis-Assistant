@@ -1,4 +1,4 @@
-# 🤖 Agents – SOC Multi-Agent AI Assistant (v1.0.2)
+# 🤖 Agents – SOC Multi-Agent AI Assistant
 This document describes each agent’s role and responsibilities.
 
 ---

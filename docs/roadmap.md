@@ -1,4 +1,4 @@
-# 🛣️ Roadmap – SOC Multi-Agent AI Assistant to (v1.2.0)
+# 🛣️ Roadmap – SOC Multi-Agent AI Assistant
 
 ---
 

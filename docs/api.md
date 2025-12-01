@@ -1,4 +1,4 @@
-# 🌐 API – SOC Multi-Agent AI Assistant (v1.0.2)
+# 🌐 API – SOC Multi-Agent AI Assistant
 
 The system is CLI-first, but provides a FastAPI module for future expansion.
 

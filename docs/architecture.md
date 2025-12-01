@@ -1,4 +1,4 @@
-# 🏛️ Architecture – SOC Multi-Agent AI Assistant (v1.0.2)
+# 🏛️ Architecture – SOC Multi-Agent AI Assistant 
 
 This document provides the full technical architecture of the system.
 

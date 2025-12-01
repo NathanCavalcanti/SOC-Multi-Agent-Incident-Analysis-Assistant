@@ -1,4 +1,4 @@
-## Workflow (v1.0.2)
+## Workflow
 
 ┌─────────────────┐
 │   User Input    │
