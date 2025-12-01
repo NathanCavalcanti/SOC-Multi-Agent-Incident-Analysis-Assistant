@@ -29,10 +29,10 @@ A fully functional, terminal-based **Security Operations Center (SOC) Multi-Agen
 
 ## 📋 Prerequisites
 
-- **Python 3.10+**
+- **Python 3.12+**
 - **Groq API Key** (free tier available at [console.groq.com](https://console.groq.com))
 - **Gemini API Key** (free tier available at [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey))
-- **Optional**: NVD API Key for higher rate limits ([nvd.nist.gov/developers](https://nvd.nist.gov/developers/request-an-api-key))
+- **NVD API Key**: NVD API Key for higher rate limits ([nvd.nist.gov/developers](https://nvd.nist.gov/developers/request-an-api-key))
 
 ---
 
@@ -89,7 +89,7 @@ GEMINI_API_KEY=your_gemini_api_key_here
 python app/main.py
 ```
 
-### Example Workflow
+### Example [Workflow](/docs/workflow.md) 
 
 1. **Paste incident data** (logs, alerts, event descriptions)
 2. **Type `END`** to signal completion
@@ -108,36 +108,8 @@ END
 **Output:**
 - Console: Structured SOC incident report
 - Files: 
-  - `output/incident_report_2024-12-01_19-30-45.txt`
-  - `output/incident_report_2024-12-01_19-30-45.json`
-
----
-
-## 📁 Project Structure
-
-```
-soc-multiagent-assistant/
-├── agents/                    # Specialized SOC agents
-│   ├── ioc_agent.py          # IOC extraction
-│   ├── mitre_agent.py        # MITRE ATT&CK mapping
-│   ├── cve_agent.py          # CVE intelligence
-│   ├── investigation_agent.py # DFIR planning
-│   └── report_agent.py       # Report generation
-├── app/
-│   ├── config.py             # LLM configuration
-│   ├── main.py               # CLI entry point
-│   └── api.py                # FastAPI server (optional)
-├── graph/
-│   ├── graph_builder.py      # LangGraph pipeline
-│   └── state.py              # Shared state management
-├── integrations/
-│   ├── mitre_local_db.py     # MITRE ATT&CK data handler
-│   └── nvd_client.py         # NVD API client
-├── data/                      # MITRE ATT&CK dataset (auto-downloaded)
-├── output/                    # Generated reports
-├── .env.example               # Environment template
-└── requirements.txt
-```
+  - `output/incident_report_YYYY-MM-DD_HH-MM-SS.txt`
+  - `output/incident_report_YYYY-MM-DD_HH-MM-SS.json`
 
 ---
 
@@ -145,26 +117,12 @@ soc-multiagent-assistant/
 
 - **Orchestration**: [LangGraph](https://github.com/langchain-ai/langgraph) (Multi-agent state management)
 - **LLM**: 
-  - **Gemini 1.5 Flash** - Data extraction agents (IOC, MITRE, CVE)
+  - **Gemini 2.0 Flash** - Data extraction agents (IOC, MITRE, CVE)
   - **Groq Llama 3.3 70B** - Analysis agents (Investigation, Reports)
 - **Data Sources**: 
   - [MITRE ATT&CK](https://attack.mitre.org/) Enterprise framework
   - [NVD API 2.0](https://nvd.nist.gov/developers) for CVE data
-- **Framework**: Python 3.10+ with Pydantic, LangChain
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - feel free to use it for learning and portfolio purposes.
-
----
-
-## 🙏 Acknowledgments
-
-- **MITRE Corporation** - ATT&CK Framework
-- **NIST** - National Vulnerability Database
-- **Groq** - Fast LLM inference
+- **Framework**: Python 3.12+ with Pydantic, LangChain
 
 ---
 
@@ -176,4 +134,10 @@ This project is licensed under the MIT License - feel free to use it for learnin
 
 ---
 
-**Version**: 1.0 | **Status**: Production-ready for portfolio demonstration
+## 📄 License
+
+This project is licensed under the MIT License - feel free to use it for learning and portfolio purposes.
+
+---
+
+**Version**: 1.0.2 | **Status**: Production-ready for portfolio demonstration
