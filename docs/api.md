@@ -1,4 +1,4 @@
-# 🌐 API – SOC Multi-Agent AI Assistant
+# 🌐 API – Multi-Agent Automated SOC Analyst
 
 The system is CLI-first, but provides a FastAPI module for future expansion.
 
@@ -8,7 +8,8 @@ The system is CLI-first, but provides a FastAPI module for future expansion.
 
 POST `/api/process_incident`
 
-### Body  
+### Body
+
 ```
 {
   "incident_text": "...",
@@ -16,7 +17,8 @@ POST `/api/process_incident`
 }
 ```
 
-### Response  
+### Response
+
 ```
 {
   "report": { ... full JSON ... }
@@ -25,8 +27,7 @@ POST `/api/process_incident`
 
 ---
 
-# 2. Current Status  
+# 2. Current Status
 
 API is prepared but not yet exposed in v1.0.  
 CLI is the default interface.
-

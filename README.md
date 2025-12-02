@@ -1,4 +1,4 @@
-# 🛡️ SOC Multi-Agent AI Assistant - CLI
+# 🛡️ Multi-Agent Automated SOC Analyst - CLI
 
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![LangGraph](https://img.shields.io/badge/LangGraph-0.1.15+-green.svg)
@@ -30,9 +30,9 @@ A fully functional, terminal-based **Security Operations Center (SOC) Multi-Agen
 ## 📋 Prerequisites
 
 - **Python 3.12+**
-- **Groq API Key** (free tier available at [console.groq.com](https://console.groq.com))
-- **Gemini API Key** (free tier available at [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey))
-- **NVD API Key**: NVD API Key for higher rate limits ([nvd.nist.gov/developers](https://nvd.nist.gov/developers/request-an-api-key))
+- **Groq API Key** free tier available at [console.groq.com](https://console.groq.com)
+- **Gemini API Key** free tier available at [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
+- **NVD API Key**: NVD API Key for higher rate limits [nvd.nist.gov/developers](https://nvd.nist.gov/developers/request-an-api-key)
 
 ---
 
@@ -140,4 +140,4 @@ This project is licensed under the MIT License - feel free to use it for learnin
 
 ---
 
-**Version**: 1.0.3 | **Status**: Production-ready for portfolio demonstration
+**Version**: 1.0.4 | **Status**: Production-ready for portfolio demonstration

@@ -1,4 +1,4 @@
-# 🏛️ Architecture – SOC Multi-Agent AI Assistant 
+# 🏛️ Architecture – Multi-Agent Automated SOC Analyst
 
 This document provides the full technical architecture of the system.
 
@@ -8,16 +8,16 @@ This document provides the full technical architecture of the system.
 
 The application is a terminal-based SOC triage system built on:
 
-- **LangGraph** → deterministic multi-agent workflows  
-- **LangChain** → LLM tool abstraction  
-- **LangGraph** → deterministic multi-agent workflows  
-- **LangChain** → LLM tool abstraction  
+- **LangGraph** → deterministic multi-agent workflows
+- **LangChain** → LLM tool abstraction
+- **LangGraph** → deterministic multi-agent workflows
+- **LangChain** → LLM tool abstraction
 - **Groq Llama 3.3** → Reasoning & Reporting (Analysis)
-- **Google Gemini 2.0 Flash** → Data Extraction (IOCs, MITRE, CVEs)  
+- **Google Gemini 2.0 Flash** → Data Extraction (IOCs, MITRE, CVEs)
 - **Local/offline validated datasets**:
-  - MITRE ATT&CK Enterprise  
-  - Sigma rules  
-  - NVD CVE retrieval  
+  - MITRE ATT&CK Enterprise
+  - Sigma rules
+  - NVD CVE retrieval
 
 ---
 
@@ -41,29 +41,30 @@ END
 
 Each node writes to the shared **SOCState**, which holds:
 
-- input_text  
-- iocs  
-- ttps (MITRE)  
-- cves  
-- investigation_plan  
-- report  
-- timestamps  
+- input_text
+- iocs
+- ttps (MITRE)
+- cves
+- investigation_plan
+- report
+- timestamps
 
 ---
 
 # 3. External Integrations
 
-## 3.1 MITRE ATT&CK Loader  
+## 3.1 MITRE ATT&CK Loader
+
 Module: `integrations/mitre_local_db.py`
 
 - Downloads `enterprise-attack.json` from GitHub ATT&CK repository.
 - If offline, falls back to `data/enterprise-attack.json`.
 - Maps:
-  - Technique ID → name, tactic, platforms  
-  - Tactic → TAxxxx  
+  - Technique ID → name, tactic, platforms
+  - Tactic → TAxxxx
 - Marks each TTP as:
-  - `"source": "Enterprise MITRE"`  
-  - `"source": "LLM supposition"`  
+  - `"source": "Enterprise MITRE"`
+  - `"source": "LLM supposition"`
 
 ---
 
@@ -79,11 +80,11 @@ search_cves(keyword, max_results=5)
 
 Returns real:
 
-- CVE ID  
-- CVSS 3.x score  
-- Description  
-- Source keyword  
-- Confidence score  
+- CVE ID
+- CVSS 3.x score
+- Description
+- Source keyword
+- Confidence score
 
 This prevents AI hallucinations.
 
@@ -110,4 +111,3 @@ Stored as immutable analysis evidence.
 4. Output printed + saved to disk
 
 ---
-
