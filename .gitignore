@@ -26,3 +26,4 @@ output/
 .DS_Store
 tmp/
 tests/
+docs/changes/
